@@ -1,6 +1,4 @@
-IF OBJECT_ID('dbo.vw_SKUPrice') IS NOT NULL DROP FUNCTION dbo.vw_SKUPrice;
-GO
-CREATE VIEW  dbo.vw_SKUPrice 
+CREATE OR ALTER VIEW  dbo.vw_SKUPrice 
 (
 	ID, Code, [Name], OneProdValue
 )
