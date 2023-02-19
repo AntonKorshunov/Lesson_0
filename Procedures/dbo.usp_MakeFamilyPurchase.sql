@@ -16,5 +16,5 @@ BEGIN
 		WHERE dbo.Family.SurName = @FamilySurName
 	END
 	ELSE
-		PRINT('Ошибка - такой семьи (' + @FamilySurName + ') нет!')
+		PRINT('РћС€РёР±РєР° - С‚Р°РєРѕР№ СЃРµРјСЊРё (' + @FamilySurName + ') РЅРµС‚!')
 END;
