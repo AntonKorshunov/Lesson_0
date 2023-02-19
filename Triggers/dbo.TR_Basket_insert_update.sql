@@ -7,9 +7,9 @@ AFTER INSERT
 AS
 UPDATE dbo.Basket
 SET DiscountValue = CASE WHEN Basket.ID_SKU IN (SELECT ID_SKU 
-												FROM inserted 
-												GROUP BY ID_SKU
-												HAVING COUNT(*) > 1)
-						THEN [Value]*0.05
-						ELSE 0
+						FROM inserted 
+						GROUP BY ID_SKU
+						HAVING COUNT(*) > 1)
+			 THEN [Value]*0.05
+			 ELSE 0
 					END;
