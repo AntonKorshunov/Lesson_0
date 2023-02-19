@@ -1,8 +1,4 @@
-IF OBJECT_ID('dbo.usp_MakeFamilyPurchase') IS NOT NULL 
-	DROP PROC dbo.usp_MakeFamilyPurchase;
-GO
-
-CREATE PROC dbo.usp_MakeFamilyPurchase
+CREATE OR ALTER PROC dbo.usp_MakeFamilyPurchase
 	@FamilySurName varchar(255)
 AS
 BEGIN
