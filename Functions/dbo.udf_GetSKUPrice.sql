@@ -1,0 +1,14 @@
+CREATE OR ALTER FUNCTION dbo.udf_GetSKUPrice
+(
+	@ID_SKU INT
+)
+RETURNS DECIMAL(18, 2)
+AS
+BEGIN
+	DECLARE @ProdVal DECIMAL(18, 2)
+	SELECT @ProdVal =  SUM([Value])/SUM(Quantity)
+	FROM dbo.Basket
+	WHERE ID_SKU = @ID_SKU
+	GROUP BY ID_SKU
+	RETURN @ProdVal
+END;
